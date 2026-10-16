@@ -1,0 +1,385 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;    
+    color: #333;
+    background-color: #fff5f3;
+}
+
+header {
+    text-align: center;
+    padding: 35px 20px;
+    background-color: #ffebed;
+}
+
+header h1 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 42px;
+    color: #773e53;
+}
+
+header p {
+    color: #744d59;
+}
+
+nav {
+    text-align: center;
+    padding: 16px;
+    background-color: #FFE7E9;
+    border-top: 1px solid #819773;
+    border-bottom: 1px solid #819773;
+}
+
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #273b27;
+    margin: 5px 12px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+
+nav a:hover {
+    color: hsl(340, 65%, 51%);
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+h2 {
+    font-family: Georgia, serif;
+    color: #a24f6b;
+}
+
+.presentacion {
+    text-align: center;
+    padding: 30px;
+}
+
+.presentacion p {
+    color: #76625f;
+    line-height: 1.7;
+}
+
+.envio {
+    text-align: center;
+    background-color: #b8cba5;
+    padding: 22px 15px;
+    margin: 20px 0;
+    border-radius: 12px;
+    color: #a24f6b;
+    border-left: 6px solid #bdd6b8;
+}
+
+.envio h2 {
+    margin: 0 0 10px;
+    color: #354b31;
+    }
+
+    .envio p {
+    margin-bottom: 0;
+}
+
+.titulo {
+    text-align: center;
+    margin: 35px 0 25px;
+    color: #a24f6b;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.producto {
+    background-color: #f8e1e5;
+    border: 1px solid #cf7c90;
+    border-radius: 14px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(111, 65, 75, 0.10);
+    transition: transform 0.3s, box-shadow 0.3s;
+    min-width: 0;
+}
+
+.producto:nth-child(even) {
+    background-color: #e1ead7;
+    border-color: #a6bd93;
+}
+
+.producto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 18px rgba(111, 65, 75, 0.18);
+}
+
+.producto img {
+    display: block;
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.producto h3 {
+    font-family: Georgia, serif;
+    color: #56c57b;
+}
+
+.producto:nth-child(even) h3 {
+    color: #4b6840;
+}
+
+.producto p {
+    color: #685654;
+    line-height: 1.5;
+}
+
+.producto strong {
+    display: block;
+    margin-top: 15px;
+    font-size: 19px;
+    color: #a34466;
+}
+
+.producto:nth-child(even) strong {
+    color: #4f713e;
+}
+
+.mensaje {
+    text-align: center;
+    background-color: #F6ABC2;
+    padding: 30px 20px;
+    margin-top: 35px;
+    border-radius: 14px;
+    border-bottom: 5px solid #b96f86;
+}
+
+.mensaje h2 {
+    color: #713c50;
+}
+
+.mensaje p {
+    color: #593c44;
+    line-height: 1.6;
+}
+
+.boton {
+    display: inline-block;
+    background-color: #60794c;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 24px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.boton:hover {
+    background-color: #435a35;
+}
+
+.pagina {
+    padding: 25px 0;
+}
+
+.pagina h2 {
+    text-align: center;
+}
+
+.pagina p {
+    line-height: 1.7;
+    color: #685654;
+}
+
+.lista {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.lista article {
+    padding: 20px;
+    background-color: #cbd9bb;
+    border: 1px solid #9eb38b;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.lista article:nth-child(2) {
+    background-color: #f1cbd4;
+    border-color: #d99bab;
+}
+
+.lista article:nth-child(3) {
+    background-color: #a8bd95;
+    border-color: #849f70;
+}
+
+.lista article h3 {
+    color: #405a38;
+    font-family: Georgia, serif;
+}
+
+.lista article:nth-child(2) h3 {
+    color: #8e425b;
+}
+
+.lista article p {
+    color: #514b42;
+    line-height: 1.6;
+}
+
+form {
+    max-width: 600px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8e1e5;
+    padding: 25px;
+    border: 1px solid #d99bab;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(111, 65, 75, 0.10);
+}
+
+form label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #8e425b;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d6a0ae;
+    border-radius: 7px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background-color: #fffafa;
+    color: #51413f;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: 2px solid #91a783;
+    border-color: #718c5e;
+}
+
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 13px;
+    background-color: #718c5e;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #4e693d;
+}
+
+.datos {
+    text-align: center;
+    background-color: #e8b6c1;
+    padding: 22px;
+    border-radius: 12px;
+    border-bottom: 5px solid #c78397;
+}
+
+.datos h2 {
+    color: #773e53;
+}
+
+.datos p {
+    color: #593c44;
+    line-height: 1.5;
+}
+
+footer {
+    text-align: center;
+    background-color: #536b45;
+    padding: 18px;
+    margin-top: 30px;
+    color: #f7f2e9;
+}
+
+footer p {
+    margin: 5px;
+}
+
+@media (max-width: 900px) {
+    .productos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .lista {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+    header {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 34px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+
+    .presentacion {
+        padding: 20px 5px;
+    }
+
+    .productos {
+        grid-template-columns: 1fr;
+    }
+
+    .producto img {
+        height: 220px;
+    }
+
+    .envio {
+        padding: 20px 10px;
+    }
+
+    .mensaje {
+        padding: 25px 15px;
+    }
+
+    form {
+        padding: 18px;
+    }
+}
