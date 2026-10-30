@@ -1,8 +1,6 @@
-WTiendita
-WTiendita es un proyecto de desarrollo web que consiste en la creación de una tienda online (e-commerce), pensado para ofrecer una experiencia de compra sencilla, intuitiva y accesible para los usuarios.
+WTiendita: WTiendita es un proyecto de desarrollo web que consiste en la creación de una tienda online (e-commerce), pensado para ofrecer una experiencia de compra sencilla, intuitiva y accesible para los usuarios.
 
-Sobre el proyecto
-Este proyecto surge como una propuesta educativa en el marco de nuestra formación técnica en Informática, a través de su desarrollo buscamos aplicar y fortalecer nuestros conocimientos en programación, diseño y desarrollo web. 
+Sobre el proyecto: Este proyecto surge como una propuesta educativa en el marco de nuestra formación técnica en Informática, a través de su desarrollo buscamos aplicar y fortalecer nuestros conocimientos en programación, diseño y desarrollo web. 
 La plataforma permitirá a los usuarios explorar, comprar y conocer nuestros productos.
 
 Objetivos
@@ -11,8 +9,7 @@ Objetivos
 * Crear una interfaz intuitiva y atractiva.
 * Trabajar en equipo y fomentar el aprendizaje colaborativo.
 
-Integrantes
-Proyecto desarrollado por estudiantes de la Escuela de Educación Secundaria Técnica N.º 5, pertenecientes a la modalidad de Informática.
+Integrantes: Proyecto desarrollado por estudiantes de la Escuela de Educación Secundaria Técnica N.º 5, pertenecientes a la modalidad de Informática.
 * Meíia Cielo
 * Rodríguez Dénise
 * De la mata Dante
