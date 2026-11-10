@@ -2,167 +2,271 @@
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Mi Tienda</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiTiendita - Regalos y productos creativos</title>
     <link rel="stylesheet" href="estilo.css">
-
 </head>
 
 <body>
 
-    <header>
+    <!-- ENCABEZADO PRINCIPAL -->
+    <header class="header-principal">
+        <div class="logo-area">
+            <div class="logo-icono">🎁</div>
+            <div class="logo-texto">
+                <h1>WiTiendita</h1>
+                <p>Papelería, regalos y productos creativos</p>
+            </div>
+        </div>
 
-        <h1>WiTiendita</h1>
+        <nav class="nav-principal">
+            <div class="dropdown-categorias">
+                <button class="btn-dropdown" onclick="toggleMenuCategorias()">
+                    Categorías <span class="flecha">▾</span>
+                </button>
+                <div class="menu-categorias-desplegable" id="menu-desplegable">
+                    <button onclick="filtrarCategoria('mama')">Mamá</button>
+                    <button onclick="filtrarCategoria('papa')">Papá</button>
+                    <button onclick="filtrarCategoria('pareja')">Pareja</button>
+                    <button onclick="filtrarCategoria('amigos')">Amigos</button>
+                    <button onclick="filtrarCategoria('familia')">Familia</button>
+                    <hr>
+                    <button onclick="filtrarCategoria('todos')">Ver todos</button>
+                </div>
+            </div>
 
-        <p>
-            Regalos y productos creativos
-        </p>
+            <a href="index.html" class="active">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
 
+        <div class="header-acciones">
+            <button class="btn-icon" title="Favoritos">♡</button>
+            <button class="btn-carrito" onclick="abrirCarritoModal()">
+                <span>🛒</span> Carrito (<span id="contador-carrito">0</span>)
+            </button>
+        </div>
     </header>
 
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="contacto.html">Contacto</a>
-    </nav>
+    <!-- PORTADA DE BORDE A BORDE CON COLOR DISTINTO -->
+    <section class="hero-fullscreen">
+        <div class="hero-contenido">
+            <div class="hero-texto">
+                <h1 class="hero-titulo-marca">WiTiendita</h1>
+                <h2 class="hero-subtitulo">Regalos y productos<br>creativos ♡</h2>
+                <p class="hero-descripcion">
+                    Encontrá productos de papelería, personalizados, sorpresas y regalos pensados para emocionar.
+                </p>
 
-    <main>
-        <section class="presentacion">
-            <h2>Bienvenidos a nuestra WiTiendita</h2>
-            <p>
-                Encontrá productos de papelería,
-                personalizados, sorpresa y regalos.
-            </p>
+                <div class="hero-botones">
+                    <button class="btn-hero-verde" onclick="scrollAProductos()">Ver productos</button>
+                    <a href="nosotros.html" class="btn-hero-rosa">Nosotros</a>
+                </div>
 
-            <p>
-                Elegimos productos prácticos y
-                creativos para poder ayudarte.
-            </p>
-
-        </section>
-
-        <section class="envio">
-            <h2>ENVÍO GRATIS</h2>
-            <p>
-                Para compras superiores a $25.000   
-            </p>
-        </section>
-        <section>
-            <h2 class="titulo">Nuestros productos</h2>
-            <div class="productos">
-                <article class="producto">
-                    <img
-                        src="imagenes/ramito.jpeg"
-                        alt=""Ramo 3 rosas
-                    >
-                    <h3>Ramo 3 rosas eternas</h3>
-                    <p>
-                        Ramo sencillo y chiquito, perfecto para sorprender
-                        a tu persona favorita.
-                    </p>
-                    <strong>$15.000</strong>
-                </article>
-                <article class="producto">
-                    <img
-                        src="imagenes/cajas.jpeg"
-                        alt="Caja de regalo"
-                    >
-                    <h3>Caja estilo minecraft</h3>
-                    <p>
-                        Ideal para poner tu regalo dentro y sorprender con estilo.
-                    </p>
-                    <strong>$4.000</strong>
-                </article>
-                <article class="producto">
-                    <img
-                        src="imagenes/tazas.jpeg"
-                        alt="Tazas para compartir"
-                    >
-                    <h3>Tazas para compartir</h3>
-                    <p>
-                        Par de tazas a juego para compartir.
-                    </p>
-                    <strong>$14.500</strong>
-                </article>
-                <article class="producto">
-                    <img
-                        src="imagenes/llaver.jpeg"
-                        alt="Laveros"
-                    >
-                    <h3>Llaveros</h3>
-                    <p>
-                        Llavero para compartir y perzonalizar la foto a tu gusto.
-                    </p>
-                    <strong>$10.000</strong>
-                </article>
-                                <article class="producto">
-                    <img
-                        src="/imagenes/cuadro.jpeg"
-                        alt=""cuadro
-                    >
-                    <h3>un cuadro</h3>
-                    <p>
-                        un cuadro para poner foto de esa persona 
-                    </p>
-                    <strong>$7500</strong>
-                </article>
-                <article class="producto">
-                    <img
-                        src="/imagenes/WhatsApp Image 2026-10-09 at 15.50.24.jpeg"
-                        alt=""collar
-                    >
-                    <h3>collar para compartir</h3>
-                    <p>
-                        un collar
-                    </p>
-                    <strong>$8500</strong>
-                </article>
-                <article class="producto">
-                    <img
-                        src="/imagenes/peluche;3.jpeg"
-                        alt=""peluche
-                    >
-                    <h3>peluche</h3>
-                    <p>
-                        un peluchede un oso 
-                    </p>
-                    <strong>$8500</strong>
-                </article>
-               <article class="producto">
-                    <img
-                        src="/imagenes/caja de chocolates.jpeg"
-                        alt=""caja
-                    >
-                    <h3>una caja con chocolates</h3>
-                    <p>
-                        una caja llena de chocolates para dar
-                    </p>
-                    <strong>$9000</strong>
-                </article>
-
+                <div class="hero-beneficios">
+                    <div class="item-beneficio"><span class="icono">🚚</span> Envíos a todo el país</div>
+                    <div class="separador">|</div>
+                    <div class="item-beneficio"><span class="icono">♡</span> Productos únicos</div>
+                    <div class="separador">|</div>
+                    <div class="item-beneficio"><span class="icono">🎁</span> Regalos con amor</div>
+                </div>
             </div>
+
+            <div class="hero-imagen-wrapper">
+                <div class="card-imagen-portada">
+                    <img src="portada.jpeg" alt="WiTiendita Regalos Creativos">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- BANNER ENVÍO GRATIS -->
+        <section class="envio" id="seccion-envio">
+            <h2>ENVÍO GRATIS</h2>
+            <p>Para compras superiores a $25.000</p>
         </section>
+
+        <h2 class="titulo" id="titulo-productos">Nuestros productos</h2>
+
+        <!-- CATÁLOGO DE 18 PRODUCTOS -->
+        <section class="productos" id="catalogo">
+
+            <article class="producto" data-categoria="mama" onclick="verProducto('Ramo para mamá','$18.000','Mamá','Un ramo especial para demostrarle a mamá cuánto la queremos.','Mamá','ramito.jpeg', 18000)">
+                <img src="ramito.jpeg" alt="Ramo para mamá">
+                <h3>Ramo para mamá</h3>
+                <p>Un detalle lleno de amor.</p>
+                <strong>$18.000</strong>
+            </article>
+
+            <article class="producto" data-categoria="pareja" onclick="verProducto('Ramo de 3 rosas eternas','$15.000','Pareja','Un ramo delicado de tres rosas eternas para sorprender a esa persona especial.','Novio o novia','ramito.jpeg', 15000)">
+                <img src="ramito.jpeg" alt="Ramo de rosas">
+                <h3>Ramo 3 rosas eternas</h3>
+                <p>Un detalle para sorprender.</p>
+                <strong>$15.000</strong>
+            </article>
+
+            <article class="producto" data-categoria="papa" onclick="verProducto('Taza para papá','$9.500','Papá','Una taza especial para regalarle a papá y acompañar sus desayunos.','Papá','tazas.jpeg', 9500)">
+                <img src="tazas.jpeg" alt="Taza para papá">
+                <h3>Taza para papá</h3>
+                <p>Para sus desayunos favoritos.</p>
+                <strong>$9.500</strong>
+            </article>
+
+            <article class="producto" data-categoria="amigos" onclick="verProducto('Caja estilo Minecraft','$8.000','Amigos','Una caja temática ideal para sorprender a los fanáticos de Minecraft.','Amigos y amigas','cajas.jpeg', 8000)">
+                <img src="cajas.jpeg" alt="Caja Minecraft">
+                <h3>Caja estilo Minecraft</h3>
+                <p>Ideal para guardar un regalo.</p>
+                <strong>$8.000</strong>
+            </article>
+
+            <article class="producto" data-categoria="familia" onclick="verProducto('Tazas familiares','$17.000','Familia','Tazas para compartir momentos lindos en familia.','Familiares','tazas.jpeg', 17000)">
+                <img src="tazas.jpeg" alt="Tazas familiares">
+                <h3>Tazas familiares</h3>
+                <p>Para compartir momentos.</p>
+                <strong>$17.000</strong>
+            </article>
+
+            <article class="producto" data-categoria="mama" onclick="verProducto('Taza para mamá','$11.000','Mamá','Una taza especial para acompañar sus desayunos.','Mamá','tazas.jpeg', 11000)">
+                <img src="tazas.jpeg" alt="Taza para mamá">
+                <h3>Taza para mamá</h3>
+                <p>Un regalo para todos sus días.</p>
+                <strong>$11.000</strong>
+            </article>
+
+            <article class="producto" data-categoria="pareja" onclick="verProducto('Tazas para compartir','$14.500','Pareja','Un par de tazas a juego para compartir momentos especiales.','Novio o novia','tazas.jpeg', 14500)">
+                <img src="tazas.jpeg" alt="Tazas para compartir">
+                <h3>Tazas para compartir</h3>
+                <p>Para compartir momentos juntos.</p>
+                <strong>$14.500</strong>
+            </article>
+
+            <article class="producto" data-categoria="familia" onclick="verProducto('Caja sorpresa familiar','$20.000','Familia','Una caja para preparar una sorpresa y compartir en familia.','Familiares','cajas.jpeg', 20000)">
+                <img src="cajas.jpeg" alt="Caja familiar">
+                <h3>Caja sorpresa familiar</h3>
+                <p>Para compartir en familia.</p>
+                <strong>$20.000</strong>
+            </article>
+
+            <article class="producto" data-categoria="papa" onclick="verProducto('Caja para papá','$16.000','Papá','Una caja especial para preparar un regalo personalizado.','Papá','cajas.jpeg', 16000)">
+                <img src="cajas.jpeg" alt="Caja para papá">
+                <h3>Caja para papá</h3>
+                <p>Preparada para sorprenderlo.</p>
+                <strong>$16.000</strong>
+            </article>
+
+            <article class="producto" data-categoria="amigos" onclick="verProducto('Llaveros personalizados','$10.000','Amigos','Llaveros para compartir y personalizar con tu foto favorita.','Amigos y amigas','llaver.jpeg', 10000)">
+                <img src="llaver.jpeg" alt="Llaveros">
+                <h3>Llaveros personalizados</h3>
+                <p>Con tu foto favorita.</p>
+                <strong>$10.000</strong>
+            </article>
+
+            <article class="producto" data-categoria="pareja" onclick="verProducto('Llavero para parejas','$12.000','Pareja','Un recuerdo personalizado para llevar siempre con vos.','Novio o novia','llaver.jpeg', 12000)">
+                <img src="llaver.jpeg" alt="Llavero para parejas">
+                <h3>Llavero para parejas</h3>
+                <p>Un recuerdo especial.</p>
+                <strong>$12.000</strong>
+            </article>
+
+            <article class="producto" data-categoria="mama" onclick="verProducto('Llavero para mamá','$8.500','Mamá','Un llavero personalizado para llevar siempre un recuerdo especial.','Mamá','llaver.jpeg', 8500)">
+                <img src="llaver.jpeg" alt="Llavero para mamá">
+                <h3>Llavero para mamá</h3>
+                <p>Un pequeño recuerdo especial.</p>
+                <strong>$8.500</strong>
+            </article>
+
+            <article class="producto" data-categoria="familia" onclick="verProducto('Ramo familiar','$19.000','Familia','Un ramo de flores para regalar en cumpleaños y fechas especiales.','Familiares','ramito.jpeg', 19000)">
+                <img src="ramito.jpeg" alt="Ramo familiar">
+                <h3>Ramo familiar</h3>
+                <p>Para celebrar momentos únicos.</p>
+                <strong>$19.000</strong>
+            </article>
+
+            <article class="producto" data-categoria="amigos" onclick="verProducto('Ramo para una amiga','$13.000','Amigos','Un pequeño ramo para demostrarle a tu amiga cuánto la apreciás.','Amigas','ramito.jpeg', 13000)">
+                <img src="ramito.jpeg" alt="Ramo para amiga">
+                <h3>Ramo para una amiga</h3>
+                <p>Un detalle para una amistad especial.</p>
+                <strong>$13.000</strong>
+            </article>
+
+            <article class="producto" data-categoria="pareja" onclick="verProducto('Caja romántica','$22.000','Pareja','Una caja especial para aniversarios, cumpleaños y sorpresas románticas.','Novio o novia','cajas.jpeg', 22000)">
+                <img src="cajas.jpeg" alt="Caja romántica">
+                <h3>Caja romántica</h3>
+                <p>Para una ocasión especial.</p>
+                <strong>$22.000</strong>
+            </article>
+
+            <article class="producto" data-categoria="papa" onclick="verProducto('Llavero para papá','$8.500','Papá','Un detalle para que papá lleve siempre con él.','Papá','llaver.jpeg', 8500)">
+                <img src="llaver.jpeg" alt="Llavero para papá">
+                <h3>Llavero para papá</h3>
+                <p>Un detalle para todos los días.</p>
+                <strong>$8.500</strong>
+            </article>
+
+            <article class="producto" data-categoria="amigos" onclick="verProducto('Cuaderno personalizado','$9.000','Amigos','Un cuaderno creativo para regalar y anotar ideas, recuerdos y proyectos.','Amigos y amigas','cajas.jpeg', 9000)">
+                <img src="cajas.jpeg" alt="Cuaderno personalizado">
+                <h3>Cuaderno personalizado</h3>
+                <p>Para guardar ideas y recuerdos.</p>
+                <strong>$9.000</strong>
+            </article>
+
+            <article class="producto" data-categoria="familia" onclick="verProducto('Kit de regalo familiar','$21.000','Familia','Un kit especial para sorprender a toda la familia en una fecha especial.','Familiares','cajas.jpeg', 21000)">
+                <img src="cajas.jpeg" alt="Kit familiar">
+                <h3>Kit de regalo familiar</h3>
+                <p>Una sorpresa para compartir.</p>
+                <strong>$21.000</strong>
+            </article>
+
+        </section>
+
+        <!-- MODAL DE DETALLE DEL PRODUCTO -->
+        <div id="ventana" style="display: none;">
+            <div class="detalle">
+                <button class="cerrar" onclick="cerrarProducto()">X</button>
+                <img id="foto-grande" src="" alt="">
+                <h2 id="nombre"></h2>
+                <h3 id="precio"></h3>
+
+                <p><strong>Categoría:</strong> <span id="categoria"></span></p>
+                <p><strong>Descripción:</strong> <span id="descripcion"></span></p>
+                <p><strong>Para quién está pensado:</strong> <span id="destinatario"></span></p>
+
+                <button onclick="agregarAlCarrito()" class="boton-comprar-modal">
+                    🛒 Agregar al Carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- MODAL DEL CARRITO -->
+        <div id="modal-carrito" style="display: none;">
+            <div class="detalle">
+                <button class="cerrar" onclick="cerrarCarritoModal()">X</button>
+                <h2>Tu Carrito de Compras 🛒</h2>
+                <div id="lista-carrito-items" style="margin: 15px 0; max-height: 200px; overflow-y: auto;"></div>
+                <h3>Total: $<span id="total-precio">0</span></h3>
+
+                <a id="btn-enviar-carrito" href="#" class="boton-comprar-modal">
+                    ✉️ Enviar pedido por Correo
+                </a>
+            </div>
+        </div>
+
         <section class="mensaje">
-            <h2>¿Queres conocer más?</h2>
-            <p>
-                Visita nuestra sección Nosotros
-                para conocer nuestra tienda.
-            </p>
-            <a class="boton" href="nosotros.html">
-                Conoce más
-            </a>
+            <h2>¿Querés conocer más?</h2>
+            <p>Visitá nuestra sección Nosotros para conocer la historia de nuestra tienda.</p>
+            <a class="boton" href="nosotros.html">Conocé más</a>
         </section>
+
     </main>
+
     <footer>
-        <p>
-            © 2026 WiTiendita
-        </p>
+        <p>© 2026 WiTiendita</p>
     </footer>
+
+    <script src="productos.js"></script>
 </body>
 </html>

@@ -2,98 +2,93 @@
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Contacto - Mi Tienda</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - WiTiendita</title>
     <link rel="stylesheet" href="estilo.css">
-
 </head>
 
 <body>
 
-    <header>
+    <header class="header-principal">
+        <div class="logo-area">
+            <div class="logo-icono">🎁</div>
+            <div class="logo-texto">
+                <h1>WiTiendita</h1>
+                <p>Papelería, regalos y productos creativos</p>
+            </div>
+        </div>
 
-        <h1>WiTiendita</h1>
+        <nav class="nav-principal">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contacto.html" class="active">Contacto</a>
+        </nav>
 
-        <p>
-            Papelería, regalos y productos creativos
-        </p>
-
+        <div class="header-acciones">
+            <button class="btn-icon" title="Favoritos">♡</button>
+            <button class="btn-carrito" onclick="abrirCarritoModal()">
+                <span>🛒</span> Carrito
+            </button>
+        </div>
     </header>
 
-    <nav>
-
-        <a href="index.html">Inicio</a>
-
-        <a href="nosotros.html">Nosotros</a>
-
-        <a href="contacto.html">Contacto</a>
-
-    </nav>
-
     <main>
-
-        <section class="pagina">
-
+        <section class="contacto-encabezado">
             <h2>Contactanos</h2>
-
-            <p>
-                ¿Tenés alguna pregunta?
-                Podés escribirnos.
-            </p>
-
-<form
-  action="https://formspree.io/f/mnppbbao"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-    <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
-
+            <p>¿Tenés alguna pregunta o querés coordinar un pedido personalizado? Podés escribirnos y te respondemos enseguida.</p>
         </section>
 
-        <section class="datos">
+        <div class="contacto-contenedor">
+            
+            <div class="card-formulario-contacto">
+                <h3>Envia tu mensaje</h3>
+                <form class="form-contacto">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" placeholder="Escribe tu mensaje">
 
-            <h2>También podés encontrarnos</h2>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Escribe tu email">
 
-            <p>
-                Email: wiiiendita@gmail.com
-            </p>
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" rows="4" placeholder="Escribe tu mensaje"></textarea>
 
-            <p>
-                Instagram: @witiendita
-            </p>
+                    <button type="submit" class="btn-enviar-contacto">Enviar mensaje</button>
+                </form>
+            </div>
 
-            <p>
-                Horario: lunes a viernes
-                de 9 a 18 hs.
-            </p>
+            <div class="tarjetas-datos-contacto">
+                <div class="card-dato-contacto">
+                    <div class="icono-box">✉️</div>
+                    <div class="info-box">
+                        <strong>Email de contacto</strong>
+                        <p>witiendieta@gmail.com</p>
+                    </div>
+                </div>
 
-        </section>
+                <div class="card-dato-contacto">
+                    <div class="icono-box">📷</div>
+                    <div class="info-box">
+                        <strong>Instagram</strong>
+                        <p>@witiendita</p>
+                    </div>
+                </div>
 
+                <div class="card-dato-contacto">
+                    <div class="icono-box">🕒</div>
+                    <div class="info-box">
+                        <strong>Horario de atención</strong>
+                        <p>Lunes a viernes de 9:00 a 18:00 hs.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </main>
 
     <footer>
-
-        <p>
-            © 2026 WiTiendita
-        </p>
-
+        <p>© 2026 WiTiendita</p>
     </footer>
 
 </body>
-
 </html>

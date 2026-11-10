@@ -2,121 +2,86 @@
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Nosotros - Mi Tienda</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - WiTiendita</title>
     <link rel="stylesheet" href="estilo.css">
-
 </head>
 
 <body>
 
-    <header>
+    <header class="header-principal">
+        <div class="logo-area">
+            <div class="logo-icono">🎁</div>
+            <div class="logo-texto">
+                <h1>WiTiendita</h1>
+                <p>Papelería, regalos y productos creativos</p>
+            </div>
+        </div>
 
-        <h1>WiTiendita</h1>
+        <nav class="nav-principal">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html" class="active">Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
 
-        <p>
-            Papelería, regalos y productos creativos
-        </p>
-
+        <div class="header-acciones">
+            <button class="btn-icon" title="Favoritos">♡</button>
+            <button class="btn-carrito" onclick="abrirCarritoModal()">
+                <span>🛒</span> Carrito
+            </button>
+        </div>
     </header>
 
-    <nav>
-
-        <a href="index.html">Inicio</a>
-
-        <a href="nosotros.html">Nosotros</a>
-
-        <a href="contacto.html">Contacto</a>
-
-    </nav>
-
     <main>
-
         <section class="pagina">
-
             <h2>Sobre nosotros</h2>
-
             <p>
                 Nuestra WiTiendita es un espacio dedicado a los regalos y detalles especiales
-                para sorprender a las personas que mas queremos.
+                para sorprender a las personas que más queremos.
             </p>
-
             <p>
-                Buscamos ofrecer opciones lindas, creativas y personalizadas para cada ocación,
+                Buscamos ofrecer opciones lindas, creativas y personalizadas para cada ocasión,
                 ya sea tu familiar, pareja o amigo.
             </p>
-
         </section>
 
         <section class="pagina">
-
             <h2>¿Qué ofrecemos?</h2>
-
             <div class="lista">
-
-                <article>
-
-                    <h3> Cajas de regalos</h3>
-
-                    <p>
-                        Cajas preparadas para cumpleaños, aniversario, fechas especiales y momentos unicos
-                    </p>
-
+                <article class="card-nosotros">
+                    <div class="card-icon">🎁</div>
+                    <h3>Cajas de regalos</h3>
+                    <p>Cajas preparadas para cumpleaños, aniversario, fechas especiales y momentos únicos.</p>
                 </article>
 
-                <article>
-
-                    <h3>Regalos personalizadas</h3>
-
-                    <p>
-                        Detalles unicos hehcos especialemente para esa persona y esa ocacion.
-                    </p>
-
+                <article class="card-nosotros">
+                    <div class="card-icon">✨</div>
+                    <h3>Regalos personalizados</h3>
+                    <p>Detalles únicos hechos especialmente para esa persona y esa ocasión.</p>
                 </article>
 
-                <article>
-
+                <article class="card-nosotros">
+                    <div class="card-icon">💐</div>
                     <h3>Ramos</h3>
-
-                    <p>
-                        Ramos de flores, chocolates y opciones personalizadas para sorprender.
-                    </p>
-
+                    <p>Ramos de flores, chocolates y opciones personalizadas para sorprender.</p>
                 </article>
-
             </div>
-
         </section>
 
         <section class="mensaje">
-
             <h2>Nuestra idea</h2>
-
             <p>
-                Creamos esta tiendita como parte de un
-                proyecto para aprender a desarrollar
+                Creamos esta tiendita como parte de un proyecto para aprender a desarrollar
                 páginas web utilizando HTML y CSS.
             </p>
-
+            <a href="index.html" class="boton">Volver a la tienda</a>
         </section>
-
     </main>
 
     <footer>
-
-        <p>
-            © 2026 WiTienda
-        </p>
-
+        <p>© 2026 WiTiendita</p>
     </footer>
 
-
 </body>
-
 </html>
