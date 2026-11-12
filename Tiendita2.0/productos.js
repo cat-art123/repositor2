@@ -89,7 +89,7 @@ function abrirCarritoModal() {
 
     document.getElementById("total-precio").textContent = totalSuma;
 
-    const correoDestino = "witiendieta@gmail.com";
+    const correoDestino = "witiendita@gmail.com";
     const asunto = encodeURIComponent("Pedido de la Tienda - WiTiendita");
     const cuerpoMensaje = encodeURIComponent("¡Hola WiTiendita! 💖 Quisiera realizar el siguiente pedido:\n\n" + textoDetalle + "\nTotal a pagar: $" + totalSuma + "\n\nQuedo a la espera de la confirmación.");
 
