@@ -1,40 +1,5 @@
-// ---- CONFIGURACIÓN DE EMAILJS (reemplazá con tus datos) ----
-const EMAILJS_PUBLIC_KEY = "TU_PUBLIC_KEY";
-const EMAILJS_SERVICE_ID = "TU_SERVICE_ID";
-const EMAILJS_TEMPLATE_ID = "TU_TEMPLATE_ID";
-emailjs.init(EMAILJS_PUBLIC_KEY);
-// -------------------------------------------------------------
-
-let carrito = cargarCarrito();
+let carrito = [];
 let productoActual = null;
-
-// ---- Persistencia: el carrito se mantiene al cambiar de página ----
-function cargarCarrito() {
-    try {
-        const guardado = localStorage.getItem("carritoWiTiendita");
-        return guardado ? JSON.parse(guardado) : [];
-    } catch (e) {
-        return [];
-    }
-}
-
-function guardarCarrito() {
-    try {
-        localStorage.setItem("carritoWiTiendita", JSON.stringify(carrito));
-    } catch (e) {
-        console.error("No se pudo guardar el carrito:", e);
-    }
-}
-
-function actualizarContador() {
-    const contador = document.getElementById("contador-carrito");
-    if (contador) {
-        contador.textContent = carrito.length;
-    }
-}
-
-document.addEventListener("DOMContentLoaded", actualizarContador);
-// -------------------------------------------------------------------
 
 function toggleMenuCategorias() {
     const menu = document.getElementById("menu-desplegable");
@@ -93,8 +58,9 @@ function cerrarProducto() {
 function agregarAlCarrito() {
     if (productoActual !== null) {
         carrito.push(productoActual);
-        guardarCarrito();
-        actualizarContador();
+
+        // Actualizamos el contador en el botón del carrito arriba de forma silenciosa
+        document.getElementById("contador-carrito").textContent = carrito.length;
 
         // Borramos el alert para que no salte ningún aviso en pantalla
         cerrarProducto();
@@ -123,50 +89,12 @@ function abrirCarritoModal() {
 
     document.getElementById("total-precio").textContent = totalSuma;
 
-    // El botón ahora llama a EmailJS en vez de abrir el programa de correo
-    const btn = document.getElementById("btn-enviar-carrito");
-    btn.removeAttribute("href");
-    btn.onclick = function(e) {
-        e.preventDefault();
-        enviarPedido(textoDetalle, totalSuma);
-    };
+    const correoDestino = "witiendita@gmail.com";
+    const asunto = encodeURIComponent("Pedido de la Tienda - WiTiendita");
+    const cuerpoMensaje = encodeURIComponent("¡Hola WiTiendita! 💖 Quisiera realizar el siguiente pedido:\n\n" + textoDetalle + "\nTotal a pagar: $" + totalSuma + "\n\nQuedo a la espera de la confirmación.");
 
+    document.getElementById("btn-enviar-carrito").href = "mailto:" + correoDestino + "?subject=" + asunto + "&body=" + cuerpoMensaje;
     document.getElementById("modal-carrito").style.display = "flex";
-}
-
-function enviarPedido(textoDetalle, totalSuma) {
-    if (carrito.length === 0) {
-        alert("El carrito está vacío.");
-        return;
-    }
-
-    // Campo opcional: si en tu HTML agregás <input id="datos-cliente">, se incluye en el correo
-    const campoCliente = document.getElementById("datos-cliente");
-    const datosCliente = campoCliente ? campoCliente.value : "";
-
-    const btn = document.getElementById("btn-enviar-carrito");
-    const textoOriginal = btn.textContent;
-    btn.textContent = "Enviando...";
-
-    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
-        lista_pedido: textoDetalle,
-        total: totalSuma,
-        datos_cliente: datosCliente
-    })
-    .then(function() {
-        alert("¡Pedido enviado! Gracias por tu compra 💖");
-        carrito = [];
-        guardarCarrito();
-        actualizarContador();
-        cerrarCarritoModal();
-    })
-    .catch(function(error) {
-        alert("No se pudo enviar el pedido. Probá de nuevo.");
-        console.error("Error EmailJS:", error);
-    })
-    .finally(function() {
-        btn.textContent = textoOriginal;
-    });
 }
 
 function cerrarCarritoModal() {
