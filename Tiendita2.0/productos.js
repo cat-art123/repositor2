@@ -1,4 +1,4 @@
-let carrito = [];
+ let carrito = [];
 let productoActual = null;
 
 function toggleMenuCategorias() {
